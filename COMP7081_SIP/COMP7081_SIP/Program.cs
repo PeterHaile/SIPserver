@@ -12,8 +12,6 @@ namespace COMP7081_SIP
             // Read in from socket
 
             SIPProxyServer sipProxyServer = new SIPProxyServer();
-
-            System.Console.WriteLine("F");
             sipProxyServer.run();
 
             // Determine whether it's register or not
