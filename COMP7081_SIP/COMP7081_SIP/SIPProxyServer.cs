@@ -25,7 +25,9 @@ namespace COMP7081_SIP
 
         public void run()
         {
-            received_byte
+            byte[] recieved_bytes;
+
+
         }
     }
 }
