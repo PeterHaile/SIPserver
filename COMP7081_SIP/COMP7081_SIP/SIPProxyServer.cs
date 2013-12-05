@@ -61,7 +61,18 @@ namespace COMP7081_SIP
                         // Check if the user is registered before forwarding.
                         if (Registrar.checkUser(receivedMessage.contactUser) != null)
                         {
-                            udpClient.Send(receivedBytes, receivedBytes.Length, receivedMessage.toIP, PORTNUM);
+                            String ip;
+
+                            if (receivedMessage.type.Equals("INVITE") || receivedMessage.type.Equals("CANCEL") || receivedMessage.type.Equals("BYE") || receivedMessage.type.Equals("OPTIONS"))
+                            {
+                                ip = Registrar.checkUser(receivedMessage.toUser);
+                            }
+                            else
+                            {
+                                ip = Registrar.checkUser(receivedMessage.fromUser);
+                            }
+
+                            udpClient.Send(receivedBytes, receivedBytes.Length, ip, PORTNUM);
                         }
                     }
 
