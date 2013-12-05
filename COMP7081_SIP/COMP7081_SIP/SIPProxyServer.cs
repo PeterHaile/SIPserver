@@ -46,22 +46,28 @@ namespace COMP7081_SIP
                     if (receivedMessage.type.Equals("REGISTER"))
                     {
                         // Add the user to the registrar (will replace if already exists).
-                        Registrar.addUser(receivedMessage.user, receivedMessage.ip);
+                        Registrar.addUser(receivedMessage.contactUser, receivedMessage.contactIP);
+                        
+                        // Get the successful registration message.
+                        byte[] sendBytes = Encoding.ASCII.GetBytes(receivedMessage.getRegistrationSuccessMessage());
+
+                        // Send this message back to the user that wants to register.
+                        udpClient.Send(sendBytes, sendBytes.Length, receivedMessage.contactIP, PORTNUM);
                         System.Console.WriteLine("Added user");
                     }
                     // Otherwise, check if the user is registered and forward it.
                     else
                     {
                         // Check if the user is registered before forwarding.
-                        if (Registrar.checkUser(receivedMessage.user) != null)
+                        if (Registrar.checkUser(receivedMessage.contactUser) != null)
                         {
                             udpClient.Send(receivedBytes, receivedBytes.Length, receivedMessage.toIP, PORTNUM);
                         }
                     }
 
                     System.Console.WriteLine("Type:" + receivedMessage.type);
-                    System.Console.WriteLine("Type:" + receivedMessage.user);
-                    System.Console.WriteLine("Type:" + receivedMessage.ip);
+                    System.Console.WriteLine("Type:" + receivedMessage.contactUser);
+                    System.Console.WriteLine("Type:" + receivedMessage.contactIP);
                     System.Console.WriteLine("Type:" + receivedMessage.toIP);
                     System.Console.WriteLine("Type:" + receivedMessage.toUser);
                 }
