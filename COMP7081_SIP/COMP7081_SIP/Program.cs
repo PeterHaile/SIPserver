@@ -9,18 +9,9 @@ namespace COMP7081_SIP
     {
         static void Main(string[] args)
         {
-            // Read in from socket
-
+            // Create a new SIP Proxy server.
             SIPProxyServer sipProxyServer = new SIPProxyServer();
             sipProxyServer.run();
-
-            // Determine whether it's register or not
-
-
-            // Send out of socket.
-
-
-
         }
     }
 }

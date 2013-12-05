@@ -1,0 +1,446 @@
+[12/5/2013 9:57:50 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.3:5060;rport;branch=z9hG4bK29801
+From: <sip:wtf@192.168.0.12>;tag=18132
+To: <sip:wtf@192.168.0.12>
+Call-ID: 23098
+CSeq: 73 REGISTER
+Contact: <sip:wtf@192.168.0.3;line=10e5616d7d6136a>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 9:57:50 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.14:5060;rport;branch=z9hG4bK30092
+From: <sip:C@192.168.0.12>;tag=2435
+To: <sip:C@192.168.0.12>
+Call-ID: 25277
+CSeq: 7 REGISTER
+Contact: <sip:C@192.168.0.14;line=e0bc442e711edc8>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 9:57:53 AM]
+INVITE sip:a@192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport;branch=z9hG4bK5465
+From: <sip:b@192.168.0.12>;tag=24773
+To: <sip:a@192.168.0.12>
+Call-ID: 12629
+CSeq: 20 INVITE
+Contact: <sip:b@192.168.0.11>
+Content-Type: application/sdp
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Subject: Phone call
+Content-Length:   411
+
+v=0
+o=b 2104 3794 IN IP4 192.168.0.11
+s=Talk
+c=IN IP4 192.168.0.11
+t=0 0
+m=audio 7078 RTP/AVP 111 110 0 8 101
+a=rtpmap:111 speex/16000
+a=fmtp:111 vbr=on
+a=rtpmap:110 speex/8000
+a=fmtp:110 vbr=on
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-11
+m=video 9078 RTP/AVP 103 99
+a=rtpmap:103 VP8/90000
+a=rtpmap:99 MP4V-ES/90000
+a=fmtp:99 profile-level-id=3
+
+[12/5/2013 9:57:53 AM]
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK5465;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=24773
+To: <sip:a@192.168.0.12>
+Call-ID: 12629
+CSeq: 20 INVITE
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 9:57:53 AM]
+SIP/2.0 101 Dialog Establishement
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK5465;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=24773
+To: <sip:a@192.168.0.12>;tag=23281
+Call-ID: 12629
+CSeq: 20 INVITE
+Contact: <sip:a@192.168.0.2:5060>
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 9:57:53 AM]
+OPTIONS sip:b@192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK10414
+From: <sip:a@192.168.0.12>;tag=18472
+To: <sip:b@192.168.0.12>
+Call-ID: 15696
+CSeq: 20 OPTIONS
+Accept: application/sdp
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 9:57:53 AM]
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport=5060;branch=z9hG4bK10414;received=192.168.0.12
+From: <sip:a@192.168.0.12>;tag=18472
+To: <sip:b@192.168.0.12>;tag=15715
+Call-ID: 15696
+CSeq: 20 OPTIONS
+Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, SUBSCRIBE, NOTIFY, INFO
+Accept: application/sdp
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 9:57:53 AM]
+SIP/2.0 180 Ringing
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK5465;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=24773
+To: <sip:a@192.168.0.12>;tag=23281
+Call-ID: 12629
+CSeq: 20 INVITE
+Contact: <sip:a@192.168.0.2:5060>
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 9:57:54 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.3:5060;rport;branch=z9hG4bK29801
+From: <sip:wtf@192.168.0.12>;tag=18132
+To: <sip:wtf@192.168.0.12>
+Call-ID: 23098
+CSeq: 73 REGISTER
+Contact: <sip:wtf@192.168.0.3;line=10e5616d7d6136a>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:00:42 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK23361
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 12 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:00:44 AM]
+INVITE sip:a@192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport;branch=z9hG4bK20102
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>
+Call-ID: 781
+CSeq: 20 INVITE
+Contact: <sip:b@192.168.0.11>
+Content-Type: application/sdp
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, NOTIFY, MESSAGE, SUBSCRIBE, INFO
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Subject: Phone call
+Content-Length:   411
+
+v=0
+o=b 2856 3138 IN IP4 192.168.0.11
+s=Talk
+c=IN IP4 192.168.0.11
+t=0 0
+m=audio 7078 RTP/AVP 111 110 0 8 101
+a=rtpmap:111 speex/16000
+a=fmtp:111 vbr=on
+a=rtpmap:110 speex/8000
+a=fmtp:110 vbr=on
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-11
+m=video 9078 RTP/AVP 103 99
+a=rtpmap:103 VP8/90000
+a=rtpmap:99 MP4V-ES/90000
+a=fmtp:99 profile-level-id=3
+
+[12/5/2013 10:00:44 AM]
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK20102;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>
+Call-ID: 781
+CSeq: 20 INVITE
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:44 AM]
+SIP/2.0 101 Dialog Establishement
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK20102;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>;tag=16827
+Call-ID: 781
+CSeq: 20 INVITE
+Contact: <sip:a@192.168.0.2:5060>
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:44 AM]
+OPTIONS sip:b@192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK17883
+From: <sip:a@192.168.0.12>;tag=15938
+To: <sip:b@192.168.0.12>
+Call-ID: 4996
+CSeq: 20 OPTIONS
+Accept: application/sdp
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:44 AM]
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport=5060;branch=z9hG4bK17883;received=192.168.0.12
+From: <sip:a@192.168.0.12>;tag=15938
+To: <sip:b@192.168.0.12>;tag=12236
+Call-ID: 4996
+CSeq: 20 OPTIONS
+Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, MESSAGE, SUBSCRIBE, NOTIFY, INFO
+Accept: application/sdp
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:44 AM]
+SIP/2.0 180 Ringing
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK20102;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>;tag=16827
+Call-ID: 781
+CSeq: 20 INVITE
+Contact: <sip:a@192.168.0.2:5060>
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:46 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK23361
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 12 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:00:47 AM]
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK20102;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>;tag=16827
+Call-ID: 781
+CSeq: 20 INVITE
+Contact: <sip:a@192.168.0.12>
+Content-Type: application/sdp
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length:   408
+
+v=0
+o=a 433 2577 IN IP4 192.168.0.2
+s=Talk
+c=IN IP4 192.168.0.2
+t=0 0
+m=audio 7078 RTP/AVP 111 110 0 8 101
+a=rtpmap:111 speex/16000
+a=fmtp:111 vbr=on
+a=rtpmap:110 speex/8000
+a=fmtp:110 vbr=on
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-11
+m=video 9078 RTP/AVP 103 99
+a=rtpmap:103 VP8/90000
+a=rtpmap:99 MP4V-ES/90000
+a=fmtp:99 profile-level-id=3
+
+[12/5/2013 10:00:47 AM]
+ACK sip:a@192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport;branch=z9hG4bK7579
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>;tag=16827
+Call-ID: 781
+CSeq: 20 ACK
+Contact: <sip:b@192.168.0.12>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:49 AM]
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport=5060;branch=z9hG4bK20102;received=192.168.0.12
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>;tag=16827
+Call-ID: 781
+CSeq: 20 INVITE
+Contact: <sip:a@192.168.0.12>
+Content-Type: application/sdp
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length:   408
+
+v=0
+o=a 433 2577 IN IP4 192.168.0.2
+s=Talk
+c=IN IP4 192.168.0.2
+t=0 0
+m=audio 7078 RTP/AVP 111 110 0 8 101
+a=rtpmap:111 speex/16000
+a=fmtp:111 vbr=on
+a=rtpmap:110 speex/8000
+a=fmtp:110 vbr=on
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-11
+m=video 9078 RTP/AVP 103 99
+a=rtpmap:103 VP8/90000
+a=rtpmap:99 MP4V-ES/90000
+a=fmtp:99 profile-level-id=3
+
+[12/5/2013 10:00:49 AM]
+ACK sip:a@192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport;branch=z9hG4bK7579
+From: <sip:b@192.168.0.12>;tag=27623
+To: <sip:a@192.168.0.12>;tag=16827
+Call-ID: 781
+CSeq: 20 ACK
+Contact: <sip:b@192.168.0.12>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Content-Length: 0
+
+
+[12/5/2013 10:00:50 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.11:5060;rport;branch=z9hG4bK23509
+From: <sip:b@192.168.0.12>;tag=14629
+To: <sip:b@192.168.0.12>
+Call-ID: 23538
+CSeq: 11 REGISTER
+Contact: <sip:b@192.168.0.11;line=1a869059aaff53c>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:00:50 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK23361
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 12 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:24:39 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK11710
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 24 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:24:40 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK11710
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 24 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:24:42 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK11710
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 24 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:24:46 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK11710
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 24 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+
+[12/5/2013 10:24:50 AM]
+REGISTER sip:192.168.0.12 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.2:5060;rport;branch=z9hG4bK11710
+From: <sip:a@192.168.0.12>;tag=6868
+To: <sip:a@192.168.0.12>
+Call-ID: 12088
+CSeq: 24 REGISTER
+Contact: <sip:a@192.168.0.2;line=3a9d3894d72dd49>
+Max-Forwards: 70
+User-Agent: Linphone/3.6.1 (eXosip2/3.6.0)
+Expires: 3600
+Content-Length: 0
+
+

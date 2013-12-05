@@ -12,19 +12,33 @@ namespace COMP7081_SIP
     public class Registrar
     {
         private static char[] delim = { ',' };
-        private static string localPath = new Uri(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).LocalPath;
+        private static string localPath = new Uri(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).LocalPath + "\\RegisteredUsers.csv";
         public static void addUser(string name, string ip)
         {
             try
             {
                 Hashtable allUsers = getUserData();
-                if (allUsers != null && !allUsers.ContainsKey(name))
+                if (allUsers != null)
                 {
-                    using (FileStream registeredUsers = new FileStream(localPath
-                        + "\\RegisteredUsers.csv", FileMode.Append))
-                    using (StreamWriter write = new StreamWriter(registeredUsers))
+                    if (!allUsers.ContainsKey(name))
                     {
-                        write.WriteLine(name + "," + ip);
+                        using (FileStream registeredUsers = new FileStream(localPath, FileMode.Append))
+                        using (StreamWriter write = new StreamWriter(registeredUsers))
+                        {
+                            write.WriteLine(name + "," + ip);
+                        }
+                    }
+                    else
+                    {
+                        allUsers[name] = ip;
+                        using (FileStream registeredUsers = new FileStream(localPath, FileMode.Create))
+                        using (StreamWriter write = new StreamWriter(registeredUsers))
+                        {
+                            foreach (DictionaryEntry pair in allUsers)
+                            {
+                                write.WriteLine(pair.Key.ToString() + "," + pair.Value.ToString());
+                            }
+                        }
                     }
                 }
             }
@@ -46,8 +60,7 @@ namespace COMP7081_SIP
             {
                 string line;
                 Hashtable data = new Hashtable();
-                using (FileStream registeredUsers = new FileStream(localPath
-                    + "\\RegisteredUsers.csv", FileMode.OpenOrCreate))
+                using (FileStream registeredUsers = new FileStream(localPath, FileMode.OpenOrCreate))
                 {
                     using (StreamReader reader = new StreamReader(registeredUsers))
                     {
