@@ -9,6 +9,17 @@ namespace COMP7081_SIP
     {
         static void Main(string[] args)
         {
+            // Read in from socket
+
+
+
+            // Determine whether it's register or not
+
+
+            // Send out of socket.
+
+
+
         }
     }
 }
