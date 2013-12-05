@@ -9,25 +9,33 @@ namespace COMP7081_SIP
 {
     class SIPProxyServer
     {
-        private const int PORTNUM = 5060;
+        private const int PORTNUM = 8080;
 
-        protected UdpClient listenSocket;
-        private IPEndPoint endPoint;
+        protected UdpClient udpClient;
+        private IPEndPoint ipEndPoint;
 
         public SIPProxyServer()
         {
             // Create the UdpClient that we can send/receive with.
-            listenSocket = new UdpClient(PORTNUM);
-
+            udpClient = new UdpClient(PORTNUM);
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
             // Create the socket we'll listen on.
-            endPoint = new IPEndPoint(IPAddress.Any, PORTNUM);
+            ipEndPoint = new IPEndPoint(IPAddress.Any, PORTNUM);
+            System.Console.WriteLine("Constructor done");
         }
 
         public void run()
         {
-            byte[] recieved_bytes;
+            byte[] received_bytes;
 
-
+            while (true)
+            {
+                System.Console.WriteLine("HELLO");
+                received_bytes = udpClient.Receive(ref ipEndPoint);
+                System.Console.WriteLine("Recieved from: " + ipEndPoint);
+                System.Console.WriteLine(Encoding.ASCII.GetString(received_bytes));
+            }
         }
     }
 }

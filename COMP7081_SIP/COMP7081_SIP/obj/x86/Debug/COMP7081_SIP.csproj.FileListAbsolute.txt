@@ -1,0 +1,5 @@
+C:\Users\Admin\Desktop\SIPserver\COMP7081_SIP\COMP7081_SIP\bin\Debug\COMP7081_SIP.exe
+C:\Users\Admin\Desktop\SIPserver\COMP7081_SIP\COMP7081_SIP\bin\Debug\COMP7081_SIP.pdb
+C:\Users\Admin\Desktop\SIPserver\COMP7081_SIP\COMP7081_SIP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\SIPserver\COMP7081_SIP\COMP7081_SIP\obj\x86\Debug\COMP7081_SIP.exe
+C:\Users\Admin\Desktop\SIPserver\COMP7081_SIP\COMP7081_SIP\obj\x86\Debug\COMP7081_SIP.pdb
